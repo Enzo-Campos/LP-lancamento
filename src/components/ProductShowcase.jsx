@@ -1,51 +1,251 @@
 import './ProductShowcase.css'
 
-// ─── Sample Data ─────────────────────────────────────────────────────────────
-//
-// Replace `lifestyleImage` and `materialImage` with your actual imported assets.
-// Example:
-//   import img1 from '../assets/imagem1.jpg'
-//   import swatch1 from '../assets/toco.jpg'
-//
-// Then set:  lifestyleImage: img1,  materialImage: swatch1
+// ─── Capas ────────────────────────────────────────────────────────────────────
+import capaBriTecaTeak   from '../assets/capas/BRI TECA TEAK.jpg'
+import capaMuxaTropi     from '../assets/capas/MUXA TROPI.jpg'
+import capaTacoVert      from '../assets/capas/TACO VERT.jpg'
+import capaTacoArco      from '../assets/capas/TACO ARCO.jpg'
+import capaCobLume       from '../assets/capas/COB LUME.jpg'
+import capaInfinito      from '../assets/capas/INFINITO.jpg'
+import capaElTauriClay   from '../assets/capas/EL TAURI CLAY.jpg'
+import capaElTauriNoz    from '../assets/capas/EL TAURI NOZ.jpg'
+import capaMulMirindiba  from '../assets/capas/MUL MIRINDIBA.jpg'
+import capaDeckTeca      from '../assets/capas/DECK TECA.jpg'
+import capaSucClear      from '../assets/capas/SUC CLEAR.jpg'
+import capaTauClear      from '../assets/capas/TAU CLEAR.jpg'
+import capaTauAspen      from '../assets/capas/TAU ASPEN.jpg'
+import capaTauMatte      from '../assets/capas/TAU MATTE.jpg'
+import capaCarBianco     from '../assets/capas/CAR BIANCO.jpg'
+
+// ─── Miniaturas ───────────────────────────────────────────────────────────────
+import minBriTecaTeak    from '../assets/miniaturas/BRI TECAA TEAK.jpg'
+import minMuxTropi       from '../assets/miniaturas/MIN MUX TROPI.jpg'
+import minCob            from '../assets/miniaturas/MIN COB.jpg'
+import minInfinito       from '../assets/miniaturas/MIN INFINITO.jpg'
+import minTauClay        from '../assets/miniaturas/MIN TAU CLAY.jpg'
+import minElTauNoz       from '../assets/miniaturas/EL TAU NOZ.jpg'
+import minMulMirindiba   from '../assets/miniaturas/MUL MIRINDIBA.jpg'
+import minDeckTeca       from '../assets/miniaturas/MIN DECK TECA.jpg'
+import minSucClear       from '../assets/miniaturas/SUC CLEAR.jpg'
+import minTauClear       from '../assets/miniaturas/MIN TAU CLEAR.jpg'
+import minTauAspen       from '../assets/miniaturas/MIN TAU ASPEN.jpg'
+import minTauMatte       from '../assets/miniaturas/MIN TAU MATTE.jpg'
+import minCarvBianco     from '../assets/miniaturas/CARV BIANCO.jpg'
 
 export const showcaseData = [
   {
     id: 1,
-    lifestyleImage: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&q=85',
-    lifestyleImageAlt: 'Sala contemporânea com piso Tauari Natural — Linha Estesia Indusparquet',
-    materialImage: 'https://images.unsplash.com/photo-1541123437800-1bb1317badc2?w=400&q=80',
-    materialImageAlt: 'Amostra de material: Tauari Natural',
+    lifestyleImage: capaBriTecaTeak,
+    materialImage: minBriTecaTeak,
     specs: [
-      { label: 'Madeira',  value: 'Tauari'                  },
-      { label: 'Brilho',   value: '20'                       },
-      { label: 'Cód.',     value: '8540'                     },
-      { label: 'Classe',   value: 'AC4'                      },
-      { label: 'Uso',      value: 'Residencial / Comercial'  },
+      { label: 'Madeira',  value: 'Teca'                  },
+      { label: 'Brilho',   value: '3'                       },
+      { label: 'Cód.',     value: '16681'                     },
     ],
     dimensions: [
-      { label: 'Espessura',   value: '12,5 mm'        },
-      { label: 'Largura',     value: '131 mm'          },
-      { label: 'Comprimento', value: '305–2134 mm'     },
+      { label: 'Espessura',   value: '19 mm'        },
+      { label: 'Largura',     value: '37 mm'          },
+      { label: 'Comprimento', value: '500 – 2.200 mm'     },
     ],
   },
   {
     id: 2,
-    lifestyleImage: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&q=85',
-    lifestyleImageAlt: 'Escritório moderno com piso Jatobá Claro — Linha Estesia Indusparquet',
-    materialImage: 'https://images.unsplash.com/photo-1478479405421-ce83c92fb3ba?w=400&q=80',
-    materialImageAlt: 'Amostra de material: Jatobá Claro',
+    lifestyleImage: capaMuxaTropi,
+    materialImage: minMuxTropi,
     specs: [
-      { label: 'Madeira',  value: 'Jatobá'            },
-      { label: 'Brilho',   value: '30'                 },
-      { label: 'Cód.',     value: '8541'               },
-      { label: 'Classe',   value: 'AC5'                },
-      { label: 'Uso',      value: 'Comercial Intenso'  },
+      { label: 'Madeira',  value: 'Peroba Mica ou Teca'            },
+      { label: 'Brilho',   value: 'Óleo'                 },
+      { label: 'Formato',     value: 'Quadrado'               },
     ],
     dimensions: [
-      { label: 'Espessura',   value: '14,0 mm'        },
-      { label: 'Largura',     value: '148 mm'          },
-      { label: 'Comprimento', value: '400–2134 mm'     },
+      { label: 'Espessura',   value: '50 - 110 mm'        },
+      { label: 'Largura',     value: '1.370 mm'          },
+      { label: 'Comprimento', value: '1.370 mm'     },
+    ],
+  },
+  {
+    id: 3,
+    lifestyleImage: capaCarBianco,
+    materialImage: minCarvBianco,
+    specs: [
+      { label: 'Madeira',  value: 'Carvalho Bianco ou Champanhe'            },
+      { label: 'Brilho',   value: '10'                 },
+      { label: 'Cód.',     value: '8546 / 8547'               },
+    ],
+    dimensions: [
+      { label: 'Espessura',   value: '10 mm'        },
+      { label: 'Largura',     value: '290 mm'          },
+      { label: 'Comprimento', value: '600 - 2.500 mm'     },
+    ],
+  },
+  {
+    id: 4,
+    lifestyleImage: capaTauMatte,
+    materialImage: minTauMatte,
+    specs: [
+      { label: 'Madeira',  value: 'Tauari'            },
+      { label: 'Brilho',   value: '10'                 },
+      { label: 'Cód.',     value: '8545'               },
+    ],
+    dimensions: [
+      { label: 'Espessura',   value: '10 mm'        },
+      { label: 'Largura',     value: '290 mm'          },
+      { label: 'Comprimento', value: '600 - 2.500 mm'     },
+    ],
+  },
+  {
+    id: 5,
+    lifestyleImage: capaTauAspen,
+    materialImage: minTauAspen,
+    specs: [
+      { label: 'Madeira',  value: 'Tauri'            },
+      { label: 'Brilho',   value: '10'                 },
+      { label: 'Cód.',     value: '8544'               },
+    ],
+    dimensions: [
+      { label: 'Espessura',   value: '10 mm'        },
+      { label: 'Largura',     value: '290 mm'          },
+      { label: 'Comprimento', value: '600 - 2.500 mm'     },
+    ],
+  },
+  {
+    id: 6,
+    lifestyleImage: capaTauClear,
+    materialImage: minTauClear,
+    specs: [
+      { label: 'Madeira',  value: 'Tauari'            },
+      { label: 'Brilho',   value: '10'                 },
+      { label: 'Cód.',     value: '8543'               },
+    ],
+    dimensions: [
+      { label: 'Espessura',   value: '10 mm'        },
+      { label: 'Largura',     value: '290 mm'          },
+      { label: 'Comprimento', value: '600 - 2.500 mm'     },
+    ],
+  },
+  {
+    id: 7,
+    lifestyleImage: capaSucClear,
+    materialImage: minSucClear,
+    specs: [
+      { label: 'Madeira',  value: 'Sucupira'            },
+      { label: 'Brilho',   value: '10'                 },
+      { label: 'Cód.',     value: '8542'               },
+    ],
+    dimensions: [
+      { label: 'Espessura',   value: '10 mm'        },
+      { label: 'Largura',     value: '290 mm'          },
+      { label: 'Comprimento', value: '600 - 2.500 mm'     },
+    ],
+  },
+  {
+    id: 8,
+    lifestyleImage: capaDeckTeca,
+    materialImage: minDeckTeca,
+    specs: [
+      { label: 'Madeira',  value: 'Teca'            },
+      { label: 'Cód.',     value: '16451'               },
+    ],
+    dimensions: [
+      { label: 'Espessura',   value: '19 mm'        },
+      { label: 'Largura',     value: '45 mm'          },
+      { label: 'Comprimento', value: '700 - 2.200 mm - FF AL LISO (Bisôte)'     },
+    ],
+  },
+  {
+    id: 9,
+    lifestyleImage: capaMulMirindiba,
+    materialImage: minMulMirindiba,
+    specs: [
+      { label: 'Madeira',  value: 'Mirindiba'            },
+      { label: 'Brilho',   value: '20'                 },
+      { label: 'Cód.',     value: '17014'               },
+    ],
+    dimensions: [
+      { label: 'Espessura',   value: '18 mm'        },
+      { label: 'Largura',     value: '140 mm'          },
+      { label: 'Comprimento', value: '280 - 2.235 mm'     },
+    ],
+  },
+  {
+    id: 10,
+    lifestyleImage: capaElTauriNoz,
+    materialImage: minElTauNoz,
+    specs: [
+      { label: 'Madeira',  value: 'Tauari'            },
+      { label: 'Brilho',   value: '20'                 },
+      { label: 'Cód.',     value: '8541'               },
+    ],
+    dimensions: [
+      { label: 'Espessura',   value: '12.5 mm'        },
+      { label: 'Largura',     value: '131 mm'          },
+      { label: 'Comprimento', value: '305 - 2.134 mm'     },
+    ],
+  },
+  {
+    id: 11,
+    lifestyleImage: capaElTauriClay,
+    materialImage:  minTauClay,
+    specs: [
+      { label: 'Madeira',  value: 'Tauari'            },
+      { label: 'Brilho',   value: '20'                 },
+      { label: 'Cód.',     value: '8540'               },
+    ],
+    dimensions: [
+      { label: 'Espessura',   value: '12.5 mm'        },
+      { label: 'Largura',     value: '131 mm'          },
+      { label: 'Comprimento', value: '305 - 2.134 mm'     },
+    ],
+  },
+  {
+    id: 12,
+    lifestyleImage: capaInfinito,
+    materialImage: minInfinito,
+    specs: [
+      { label: 'Madeira',  value: 'Tauari'            },
+      { label: 'Tamanho',     value: 'Sob medida'               },
+    ],
+    dimensions: [
+    ],
+  },
+  {
+    id: 13,
+    lifestyleImage: capaCobLume,
+    materialImage: minCob,
+    specs: [
+      { label: 'Madeira',  value: 'Cumaru ou Tauari'            },
+      { label: 'Brilho',   value: '20'                 },
+    ],
+    dimensions: [
+      { label: 'Espessura',   value: '70 mm'        },
+      { label: 'Largura',     value: '200 mm'          },
+      { label: 'Comprimento', value: '200 mm'     },
+    ],
+  },
+  {
+    id: 14,
+    lifestyleImage: capaTacoArco,
+    materialImage: minTauClay,
+    specs: [
+      { label: 'Madeira',  value: 'Peroba mica ou Tauari'            },
+    ],
+    dimensions: [
+      { label: 'Espessura',   value: '10 mm'        },
+      { label: 'Largura',     value: '100 mm'          },
+      { label: 'Comprimento', value: '370 mm'     },
+    ],
+  },
+  {
+    id: 15,
+    lifestyleImage: capaTacoVert,
+    materialImage:  minTauClay,
+    specs: [
+      { label: 'Madeira',  value: 'Peroba mica ou Tauari'            },
+    ],
+    dimensions: [
+      { label: 'Espessura',   value: '10 mm'        },
+      { label: 'Largura',     value: '100 mm'          },
+      { label: 'Comprimento', value: '400 mm'     },
     ],
   },
 ]

@@ -2,8 +2,6 @@ import { useEffect, useRef, useState } from 'react'
 import './App.css'
 import ProductShowcase from './components/ProductShowcase'
 
-import heroImg from './assets/hero.jpg'
-import linhaEstesiaImg from './assets/LINHA ESTESIA.png'
 import logoSvg from './assets/indusparquet.svg'
 
 function useInView(threshold = 0.15) {
@@ -59,28 +57,23 @@ export default function App() {
           <a href="https://grupoindusparquet.com.br/" target="_blank" rel="noopener noreferrer">
             <img src={logoSvg} alt="Indusparquet" className="nav-logo" />
           </a>
-          <button className="nav-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label="Menu">
-            <span /><span /><span />
-          </button>
-          <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
-            <li><a href="#manifesto" onClick={() => setMenuOpen(false)}>Manifesto</a></li>
-            <li><a href="#projeto" onClick={() => setMenuOpen(false)}>O Projeto</a></li>
-            <li><a href="#collab" onClick={() => setMenuOpen(false)} className="nav-cta">Collab</a></li>
-          </ul>
         </div>
       </nav>
 
       {/* SEÇÃO 1 — HERO */}
       <section className="hero">
-        <div className="hero-bg" style={{ backgroundImage: `url(${heroImg})` }} />
+        <div className="hero-bg"/>
         <div className="hero-overlay" />
         <div className="hero-content container">
           <FadeIn delay={100}>
+            <h1 className="hero-title">
+              Novos lançamentos 2026.
+            </h1>
+            <p className="hero-title-sub">O padrão internacional da madeira tropical.</p>
           </FadeIn>
           <FadeIn delay={460}>
             <p className="hero-subtitle">
-              Quando a madeira deixa de ser superfície<br />
-              e passa a ser linguagem sensorial.
+              Coleções criadas para projetos que exigem sofisticação, desempenho e identidade.
             </p>
           </FadeIn>
           <FadeIn delay={660}>

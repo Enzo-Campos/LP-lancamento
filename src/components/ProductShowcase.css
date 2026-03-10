@@ -9,6 +9,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: 640px;
+  padding: 70px 0px;
 }
 
 .showcase-row--reversed .showcase-image-col {
@@ -28,9 +29,9 @@
 .showcase-image-col img {
   position: absolute;
   inset: 0;
-  width: 89%;
-  height: 89%;
-  object-fit: cover;
+  width: 95%;
+  height: 95%;
+  object-fit: contain;
   display: block;
   margin: auto;
 }
@@ -42,7 +43,8 @@
 }
 
 .showcase-panel {
-  width: 100%;
+  width: 95%;
+  margin: auto;
   padding: 80px 72px;
 }
 
