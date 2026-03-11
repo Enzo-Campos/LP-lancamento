@@ -67,9 +67,8 @@ export default function App() {
         <div className="hero-content container">
           <FadeIn delay={100}>
             <h1 className="hero-title">
-              Novos lançamentos 2026.
+              Novos Lançamentos 2026.
             </h1>
-            <p className="hero-title-sub">O padrão internacional da madeira tropical.</p>
           </FadeIn>
           <FadeIn delay={460}>
             <p className="hero-subtitle">

@@ -207,16 +207,16 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: #003057;
+  background-image: url("./assets/hero.jpg");
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(to top,
-      rgba(0, 0, 0, 0.4) 100%,
-      rgba(0, 0, 0, 0.4) 100%,
-      rgba(0, 0, 0, 0.4) 100%);
+      rgba(0, 0, 0, 0.3) 100%,
+      rgba(0, 0, 0, 0.3) 100%,
+      rgba(0, 0, 0, 0.3) 100%);
 }
 
 .hero-content {
