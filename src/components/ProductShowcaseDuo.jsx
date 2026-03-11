@@ -11,36 +11,6 @@ import imgMuxarabiTro from '../assets/capas/MUXARABI TRO.png'
 
 export const duoData = [
   {
-    id: 1,
-    materialImage: imgLambri,
-    materialImageAlt: 'Lambri',
-    specs: [
-      { label: 'Madeira', value: 'Teca'  },
-      { label: 'Brilho',  value: '20'      },
-      { label: 'Cód.',    value: '17178'       },
-    ],
-    dimensions: [
-      { label: 'Espessura',   value: '8 mm'  },
-      { label: 'Largura',     value: '43 mm'  },
-      { label: 'Comprimento', value: '500 - 2.200 mm BTS5'  },
-    ],
-  },
-  {
-    id: 2,
-    materialImage: imgLambri1,
-    materialImageAlt: 'Lambri 1',
-    specs: [
-      { label: 'Madeira', value: 'Teca'  },
-      { label: 'Brilho',  value: '20'      },
-      { label: 'Cód.',    value: '17177'       },
-    ],
-    dimensions: [
-      { label: 'Espessura',   value: '8 mm'  },
-      { label: 'Largura',     value: '43 mm'  },
-      { label: 'Comprimento', value: '500 - 2.200 mm Bisotê'  },
-    ],
-  },
-  {
     id: 3,
     materialImage: imgMuxarabi,
     materialImageAlt: 'Muxarabi',
@@ -68,6 +38,37 @@ export const duoData = [
       { label: 'Espessura',   value: '55 mm'  },
       { label: 'Largura',     value: '440 mm'  },
       { label: 'Comprimento', value: '1300 mm'  },
+    ],
+  },
+  {
+    id: 1,
+    anchorId: 'lambri',
+    materialImage: imgLambri,
+    materialImageAlt: 'Lambri',
+    specs: [
+      { label: 'Madeira', value: 'Teca'  },
+      { label: 'Brilho',  value: '20'      },
+      { label: 'Cód.',    value: '17178'       },
+    ],
+    dimensions: [
+      { label: 'Espessura',   value: '8 mm'  },
+      { label: 'Largura',     value: '43 mm'  },
+      { label: 'Comprimento', value: '500 - 2.200 mm BTS5'  },
+    ],
+  },
+  {
+    id: 2,
+    materialImage: imgLambri1,
+    materialImageAlt: 'Lambri 1',
+    specs: [
+      { label: 'Madeira', value: 'Teca'  },
+      { label: 'Brilho',  value: '20'      },
+      { label: 'Cód.',    value: '17177'       },
+    ],
+    dimensions: [
+      { label: 'Espessura',   value: '8 mm'  },
+      { label: 'Largura',     value: '43 mm'  },
+      { label: 'Comprimento', value: '500 - 2.200 mm Bisotê'  },
     ],
   },
 ]
@@ -123,7 +124,7 @@ function DuoRow({ left, right, rowIndex }) {
   const bg = rowIndex % 2 === 0 ? '#ffffff' : '#f7f6f4'
 
   return (
-    <section className="duo-row" style={{ background: bg }}>
+    <section id={left.anchorId || undefined} className="duo-row" style={{ background: bg }}>
       <div className="duo-col">
         <SpecPanel product={left} />
       </div>

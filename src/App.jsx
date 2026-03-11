@@ -37,12 +37,22 @@ function FadeIn({ children, delay = 0, className = '' }) {
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [dropdownOpen, setDropdownOpen] = useState(false)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60)
     window.addEventListener('scroll', onScroll)
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
+
+  useEffect(() => {
+    if (!dropdownOpen) return
+    const close = (e) => {
+      if (!e.target.closest('.nav-dropdown')) setDropdownOpen(false)
+    }
+    document.addEventListener('click', close)
+    return () => document.removeEventListener('click', close)
+  }, [dropdownOpen])
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -58,6 +68,30 @@ export default function App() {
           <a href="https://grupoindusparquet.com.br/" target="_blank" rel="noopener noreferrer">
             <img src={logoSvg} alt="Indusparquet" className="nav-logo" />
           </a>
+          <div className="nav-dropdown">
+            <button
+              className="nav-dropdown-trigger"
+              onClick={e => { e.stopPropagation(); setDropdownOpen(o => !o) }}
+            >
+              <span className="nav-dropdown-label">Produtos</span>
+              <span className="nav-dropdown-chevron" />
+              <svg className="nav-hamburger" width="18" height="14" viewBox="0 0 18 14" fill="none" aria-hidden="true">
+                <line x1="0" y1="1"  x2="18" y2="1"  stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                <line x1="0" y1="7"  x2="18" y2="7"  stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                <line x1="0" y1="13" x2="18" y2="13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+              </svg>
+            </button>
+            <div className={`nav-dropdown-menu${dropdownOpen ? ' open' : ''}`}>
+              <a href="#assoalho"    onClick={() => setDropdownOpen(false)}>Assoalho</a>
+              <a href="#deck"        onClick={() => setDropdownOpen(false)}>Deck</a>
+              <a href="#masterteto"  onClick={() => setDropdownOpen(false)}>Masterteto</a>
+              <a href="#linha-forma" onClick={() => setDropdownOpen(false)}>Linha Forma</a>
+              <a href="#revestimento" onClick={() => setDropdownOpen(false)}>Revestimento</a>
+              <a href="#brise"       onClick={() => setDropdownOpen(false)}>Brise</a>
+              <a href="#muxarabi"    onClick={() => setDropdownOpen(false)}>Muxarabi</a>
+              <a href="#lambri"      onClick={() => setDropdownOpen(false)}>Lambri</a>
+            </div>
+          </div>
         </div>
       </nav>
 
@@ -68,7 +102,7 @@ export default function App() {
         <div className="hero-content container">
           <FadeIn delay={100}>
             <h1 className="hero-title">
-              Novos Lançamentos 2026.
+              Lançamentos 2026.
             </h1>
           </FadeIn>
           <FadeIn delay={460}>
