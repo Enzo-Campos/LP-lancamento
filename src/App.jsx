@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import './App.css'
 import ProductShowcase from './components/ProductShowcase'
+import ProductShowcaseDuo from './components/ProductShowcaseDuo'
 
 import logoSvg from './assets/indusparquet.svg'
 
@@ -85,6 +86,9 @@ export default function App() {
 
       {/* PRODUCT SHOWCASE */}
       <ProductShowcase />
+
+      {/* PRODUCT SHOWCASE DUO */}
+      <ProductShowcaseDuo />
 
       {/* FOOTER */}
       <footer className="footer">

@@ -1,0 +1,53 @@
+/* ─── ProductShowcaseDuo ──────────────────────────────────────────────────── */
+/* Reutiliza as classes de .showcase-panel, .showcase-swatch, etc.            */
+/* do ProductShowcase.css — importe ambos os arquivos no componente.          */
+
+.duo-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 70px 0;
+}
+
+.duo-col {
+  display: flex;
+  align-items: center;
+}
+
+/* Linha divisória vertical entre as duas colunas */
+.duo-col + .duo-col {
+  border-left: 1px solid #e5e1db;
+}
+
+/* Imagem completa — sem corte */
+.duo-col .showcase-swatch {
+  width: 60%;
+  height: auto;
+  aspect-ratio: auto;
+  overflow: visible;
+}
+
+.duo-col .showcase-swatch img {
+  width: 70%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ─── Responsive ──────────────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .duo-row {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .duo-col + .duo-col {
+    border-left: none;
+    border-top: 1px solid #e5e1db;
+  }
+
+  .duo-col .showcase-swatch {
+    width: 100%;
+    height: auto;
+  }
+  
+}
