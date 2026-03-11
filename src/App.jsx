@@ -38,6 +38,7 @@ export default function App() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [dropdownOpen, setDropdownOpen] = useState(false)
+  const dropdownRef = useRef(null)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60)
@@ -46,13 +47,14 @@ export default function App() {
   }, [])
 
   useEffect(() => {
-    if (!dropdownOpen) return
     const close = (e) => {
-      if (!e.target.closest('.nav-dropdown')) setDropdownOpen(false)
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setDropdownOpen(false)
+      }
     }
     document.addEventListener('click', close)
     return () => document.removeEventListener('click', close)
-  }, [dropdownOpen])
+  }, [])
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -68,10 +70,10 @@ export default function App() {
           <a href="https://grupoindusparquet.com.br/" target="_blank" rel="noopener noreferrer">
             <img src={logoSvg} alt="Indusparquet" className="nav-logo" />
           </a>
-          <div className="nav-dropdown">
+          <div className="nav-dropdown" ref={dropdownRef}>
             <button
               className="nav-dropdown-trigger"
-              onClick={e => { e.stopPropagation(); setDropdownOpen(o => !o) }}
+              onClick={() => setDropdownOpen(o => !o)}
             >
               <span className="nav-dropdown-label">Produtos</span>
               <span className="nav-dropdown-chevron" />

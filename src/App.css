@@ -673,7 +673,8 @@
     transform: translateY(-6px);
   }
 
-  .nav-dropdown-menu.open {
+  /* Same specificity (0,3,0), comes later → wins over hover rule above */
+  .nav-dropdown .nav-dropdown-menu.open {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
